@@ -21,6 +21,7 @@ export const handler = async (e: S3Event, ctx: Context): Promise<void> => {
     data,
     { headers: { Authorization: `Bearer ${bearer}` } });
 
-  console.log(response?.data);
+  console.log('Bearer ', bearer);
+  console.log('Response ', response?.data);
 
 }
